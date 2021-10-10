@@ -17,6 +17,10 @@ int	main()
 	int	m, n;
 	bool	*arr;
 
+	std::cout.tie(NULL);
+	std::cin.tie(NULL);
+	std::ios::sync_with_stdio(false);
+
 	std::cin >> m >> n;
 	arr = new bool[n + 1];
 	for (int i = 0; i <= n; i++)
@@ -24,7 +28,7 @@ int	main()
 	Eratos(arr, n);
 	for (int i = m; i <= n; i++)
 		if (arr[i])
-			printf("%d\n", i);
+			std::cout << i << '\n';
 	delete[] arr;
 	return 0;
 }
