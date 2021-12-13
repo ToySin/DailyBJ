@@ -85,6 +85,9 @@ int	main()
 	}
 	DFS(adj_matrix, N, V);
 	BFS(adj_matrix, N, V);
+	for (int i = 1; i <= N; i++)
+		free(adj_matrix[i]);
+	free(adj_matrix);
 	return (0);
 }
 
